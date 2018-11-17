@@ -1,5 +1,6 @@
+
 #game, #enemyGame{
-    width: 200px;
+    margin: auto 30px;
     display: inline-block;
 }
 #game .buttonInGame{

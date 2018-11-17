@@ -5,6 +5,7 @@
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="../../css/fontello-972fff05/css/fontello.css" type="text/css"/>
     <style>
+        /*ustawienia body dołączone do każdego widoku*/
         body{
             text-align: center;
             background-color: #55321a;

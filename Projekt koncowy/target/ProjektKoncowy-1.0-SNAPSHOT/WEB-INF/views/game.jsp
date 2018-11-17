@@ -6,18 +6,7 @@
     <title>Game</title>
     <script src="../../js/jQuery3.3.1.js"></script>
     <script src="../../js/app.js"></script>
-    <style>
-        #game, #enemyGame{
-            width: 200px;
-            display: inline-block;
-        }
-        .buttonInGame{
-            width: 50px;
-            height: 50px;
-            display: inline-block;
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/game.css"/>
 </head>
 <body>
 
