@@ -3,7 +3,8 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="../../css/fontello-972fff05/css/fontello.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/fontello-972fff05/css/fontello.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/header.css"/>
     <style>
         /*ustawienia body dołączone do każdego widoku*/
         body{
