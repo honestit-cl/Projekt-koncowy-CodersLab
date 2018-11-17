@@ -4,25 +4,23 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        .error{
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 <body>
 
     <c:import url="header.jsp"/>
 
-    <form:form method="post" modelAttribute="userDeleteDto">
+    <div class="formArea">
+        <form:form method="post" modelAttribute="userDeleteDto">
 
-        <form:password path="password" placeholder="wpisz haslo by usunac konto"/>
-        <form:errors path="password" cssClass="error"/>
-        <c:if test="${password}"><span class="error">Błędna hasło</span></c:if>
+            <form:password path="password" placeholder="wpisz haslo by usunac konto"/><br/>
+            <form:errors path="password" cssClass="error"/>
+            <c:if test="${password}"><span class="error">Błędna hasło</span></c:if>
 
-        <input type="submit" value="Usun konto"/>
+            <input type="submit" value="Usun konto"/>
 
-    </form:form>
+        </form:form>
+    </div>
 
 </body>
 </html>

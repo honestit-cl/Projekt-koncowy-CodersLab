@@ -1,6 +1,15 @@
+.formArea{
+    margin-top: 100px;
+    display: inline-block;
+}
+input{
+    margin-top: 7px;
+}
 .error{
+    display: block;
     color: red;
 }
 .success{
+    display: block;
     color: green;
 }

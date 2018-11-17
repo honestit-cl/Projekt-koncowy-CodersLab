@@ -5,15 +5,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Login</title>
-    <style>
-        .error{
-            display: block;
-            color: red;
-        }
-        .success{
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 <body>
     <%
@@ -21,16 +13,18 @@
     %>
     <c:import url="header.jsp"/>
 
-    <form:form method="post" modelAttribute="userLoginDto">
-        <form:input path="name" placeholder="name"/><br/>
-        <form:password path="password" placeholder="password"/><br/>
+    <div class="formArea">
+        <form:form method="post" modelAttribute="userLoginDto">
+            <form:input path="name" placeholder="name"/><br/>
+            <form:password path="password" placeholder="password"/><br/>
 
-        <input type="submit" value="Zaloguj się"/><br/>
-        <c:if test="${emptyField}"><span class="error">Wszystkie pola wymagane</span></c:if>
-        <c:if test="${wrongData}"><span class="error">Niewłąściwy login lub hasło</span></c:if>
+            <input type="submit" value="Zaloguj się"/><br/>
+            <c:if test="${emptyField}"><span class="error">Wszystkie pola wymagane</span></c:if>
+            <c:if test="${wrongData}"><span class="error">Niewłąściwy login lub hasło</span></c:if>
 
-        <c:if test="${success}"><span class="success">Witam ${user.name}</span><br/></c:if>
-    </form:form>
+            <c:if test="${success}"><span class="success">Witam ${user.name}</span><br/></c:if>
+        </form:form>
+    </div>
 
 </body>
 </html>
