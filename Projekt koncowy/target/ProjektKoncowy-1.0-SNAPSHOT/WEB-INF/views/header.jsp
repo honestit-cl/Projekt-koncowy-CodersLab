@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="../../css/fontello-f5aae3d8/css/fontello.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/fontello-972fff05/css/fontello.css" type="text/css"/>
     <style>
         body{
             text-align: center;
