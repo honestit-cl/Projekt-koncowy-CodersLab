@@ -5,15 +5,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Register</title>
-    <style>
-        .error{
-            display: block;
-            color: red;
-        }
-        .success{
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 <body>
     <%

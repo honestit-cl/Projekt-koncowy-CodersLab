@@ -9,10 +9,11 @@ import javax.validation.constraints.Pattern;
 
 public class UserEmailEditDto {
 
-    @NotNull @NotBlank @Email
+    @NotNull(message = "Pole wymagane")
+    @Pattern(regexp = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", message = "Nie własciwy email")
     private String email;
 
-    @NotNull
+    @NotNull(message = "Pole wymagane")
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,20}$", message = "Hasło powinno zawierać 8-20 znaków małą literę, dużą literę i cyfrę")
     private String password;
 

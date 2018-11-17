@@ -24,11 +24,11 @@ public class EditPasswordController {
     HttpSession session;
 
     @PostMapping("/editPassword")
-    public String postEditPassword(@ModelAttribute @Valid UserEditPasswordDto userEditPasswordDto, BindingResult result, Model model) {
-        if(session.getAttribute("user") == null) {
+    public String postEditPassword(@ModelAttribute @Valid UserEditPasswordDto userEditPasswordDto, BindingResult result, Model model){
+        if(session.getAttribute("user") == null){
             return "redirect:/main";
         }
-        if(result.hasErrors()) {
+        if(result.hasErrors()){
             return "editPassword";
         }
 
@@ -51,6 +51,7 @@ public class EditPasswordController {
         user.hashPassword();
         userService.saveToDb(user);
 
+        model.addAttribute("success", true);
         return "redirect:/main";
     }
 

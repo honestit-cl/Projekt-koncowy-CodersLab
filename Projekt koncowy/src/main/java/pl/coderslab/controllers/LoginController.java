@@ -26,7 +26,7 @@ public class LoginController {
 
     @PostMapping("/login")
     public String postLogin(@ModelAttribute @Valid UserLoginDto userLoginDto, BindingResult result, Model model){
-        if(session.getAttribute("user") != null) {
+        if(session.getAttribute("user") != null){
             return "redirect:/main";
         }
 

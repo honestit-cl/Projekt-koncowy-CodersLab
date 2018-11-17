@@ -31,7 +31,7 @@ public class GameController {
 
         Integer level = (Integer)session.getAttribute("level");
 
-        if(moves == null || moves.isEmpty() || time == null || time.isEmpty()) {
+        if(moves == null || moves.isEmpty() || time == null || time.isEmpty()){
             return "redirect:/main";
         }
 
@@ -39,7 +39,7 @@ public class GameController {
         Matcher movesMatcher = pattern.matcher(moves);
         Matcher timeMatcher = pattern.matcher(time);
 
-        if(!movesMatcher.matches() || !timeMatcher.matches()) {
+        if(!movesMatcher.matches() || !timeMatcher.matches()){
             return "redirect:/main";
         }
 
@@ -56,12 +56,12 @@ public class GameController {
     }
 
     @GetMapping("/game")
-    public String getGame(Model model, @RequestParam(required = false) String level) {
-        if(session.getAttribute("user") == null) {
+    public String getGame(Model model, @RequestParam(required = false) String level){
+        if(session.getAttribute("user") == null){
             return "redirect:/main";
         }
 
-        if(level == null || level.isEmpty()) {
+        if(level == null || level.isEmpty()){
             return "redirect:/main";
         }
 

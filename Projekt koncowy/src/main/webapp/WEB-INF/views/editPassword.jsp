@@ -4,11 +4,7 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        .error{
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 <body>
 
@@ -28,6 +24,7 @@
         <c:if test="${wrongPassword}"><span class="error">Błędne hasło</span></c:if>
 
         <input type="submit" value="zmień hasło"/>
+        <c:if test="$success"><span class="success">Zmieniono hasło</span></c:if>
 
     </form:form>
 

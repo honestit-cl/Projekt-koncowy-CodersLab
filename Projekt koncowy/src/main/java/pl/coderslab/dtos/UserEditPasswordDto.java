@@ -5,15 +5,15 @@ import javax.validation.constraints.Pattern;
 
 public class UserEditPasswordDto {
 
-    @NotNull
+    @NotNull(message = "Pole wymagane")
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,20}$", message = "Hasło powinno zawierać 8-20 znaków małą literę, dużą literę i cyfrę")
     private String newPassword;
 
-    @NotNull
+    @NotNull(message = "Pole wymagane")
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,20}$", message = "Hasło powinno zawierać 8-20 znaków małą literę, dużą literę i cyfrę")
     private String confirmNewPassword;
 
-    @NotNull
+    @NotNull(message = "Pole wymagane")
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,20}$", message = "Hasło powinno zawierać 8-20 znaków małą literę, dużą literę i cyfrę")
     private String oldPassword;
 

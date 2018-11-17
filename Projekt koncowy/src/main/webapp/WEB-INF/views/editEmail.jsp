@@ -4,15 +4,7 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        .error{
-            displey: block;
-            color: red;
-        }
-        .success{
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 <body>
 

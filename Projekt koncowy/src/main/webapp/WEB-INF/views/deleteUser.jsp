@@ -4,11 +4,7 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        .error{
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 <body>
 

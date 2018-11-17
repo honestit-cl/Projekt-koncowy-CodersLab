@@ -40,7 +40,7 @@
 
         <input type="submit" value="Zarejestruj się"/><br/>
         <c:if test="${empyField}"><span class="error">Wszystkie pola wymagane</span></c:if>
-        
+
         <c:if test="${success}"><span class="success">Rejestracja się powiodła</span><br/></c:if>
 
     </form:form>

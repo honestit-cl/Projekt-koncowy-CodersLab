@@ -24,12 +24,12 @@ public class EditEmailController {
     HttpSession session;
 
     @PostMapping("/editEmail")
-    public String postEditEmail(@ModelAttribute @Valid UserEmailEditDto userEmailEditDto, BindingResult result, Model model) {
-        if(session.getAttribute("user") == null) {
+    public String postEditEmail(@ModelAttribute @Valid UserEmailEditDto userEmailEditDto, BindingResult result, Model model){
+        if(session.getAttribute("user") == null){
             return "redirect:/main";
         }
 
-        if(result.hasErrors()) {
+        if(result.hasErrors()){
             return "editEmail";
         }
 
@@ -47,12 +47,14 @@ public class EditEmailController {
         user.setEmail(newEmail);
         String effect = userService.saveToDb(user);
 
-        if(effect.equals("email")) {
+        if(effect.equals("email")){
             model.addAttribute("email", true);
             user.setEmail(oldEmail);
             return "editEmail";
         }
-        return "redirect:/main";
+
+        model.addAttribute("success", true);
+        return "editEmail";
     }
 
     @GetMapping("/editEmail")
