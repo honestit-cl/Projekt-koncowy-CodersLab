@@ -21,24 +21,14 @@ import javax.servlet.http.HttpSession;
 public class UserController {
 
     @Autowired
+    HttpSession session;
+    @Autowired
     UserService userService;
     @Autowired
     GameService gameService;
 
-    @PostMapping("/user")
-    public String postUser(HttpServletRequest request, HttpServletResponse response){
-        HttpSession session = request.getSession();
-        if(session.getAttribute("user") == null){
-            return "redirect:/main";
-        }
-        //todo
-        //todo
-        //todo
-        return null;
-    }
     @GetMapping("/user")
-    public String getUser(HttpServletRequest request, HttpServletResponse response){
-        HttpSession session = request.getSession();
+    public String getUser(Model model){
         if(session.getAttribute("user") == null){
             return "redirect:/main";
         }
@@ -51,18 +41,18 @@ public class UserController {
         movesCount = movesCount == null ? 0 : movesCount;
         timeCount = timeCount == null ? 0 : timeCount;
 
-        request.setAttribute("winCount", winCount);
-        request.setAttribute("movesCount", movesCount);
-        request.setAttribute("timeCount", timeCount);
+        model.addAttribute("winCount", winCount);
+        model.addAttribute("movesCount", movesCount);
+        model.addAttribute("timeCount", timeCount);
 
-        request.setAttribute("gamesByMoves2", gameService.load10BestMovesByUserIdOnLevel(userId, 2));
-        request.setAttribute("gamesByTime2", gameService.load10BestTimeByUserIdOnLevel(userId, 2));
-        request.setAttribute("gamesByMoves3", gameService.load10BestMovesByUserIdOnLevel(userId, 3));
-        request.setAttribute("gamesByTime3", gameService.load10BestTimeByUserIdOnLevel(userId, 3));
-        request.setAttribute("gamesByMoves4", gameService.load10BestMovesByUserIdOnLevel(userId, 4));
-        request.setAttribute("gamesByTime4", gameService.load10BestTimeByUserIdOnLevel(userId, 4));
-        request.setAttribute("gamesByMoves5", gameService.load10BestMovesByUserIdOnLevel(userId, 5));
-        request.setAttribute("gamesByTime5", gameService.load10BestTimeByUserIdOnLevel(userId, 5));
+        model.addAttribute("gamesByMoves2", gameService.load10BestMovesByUserIdOnLevel(userId, 2));
+        model.addAttribute("gamesByTime2", gameService.load10BestTimeByUserIdOnLevel(userId, 2));
+        model.addAttribute("gamesByMoves3", gameService.load10BestMovesByUserIdOnLevel(userId, 3));
+        model.addAttribute("gamesByTime3", gameService.load10BestTimeByUserIdOnLevel(userId, 3));
+        model.addAttribute("gamesByMoves4", gameService.load10BestMovesByUserIdOnLevel(userId, 4));
+        model.addAttribute("gamesByTime4", gameService.load10BestTimeByUserIdOnLevel(userId, 4));
+        model.addAttribute("gamesByMoves5", gameService.load10BestMovesByUserIdOnLevel(userId, 5));
+        model.addAttribute("gamesByTime5", gameService.load10BestTimeByUserIdOnLevel(userId, 5));
         return "user";
     }
 }

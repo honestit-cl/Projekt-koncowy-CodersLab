@@ -12,7 +12,6 @@ import pl.coderslab.dtos.UserEmailEditDto;
 import pl.coderslab.entity.User;
 import pl.coderslab.services.UserService;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -21,16 +20,16 @@ public class EditEmailController {
 
     @Autowired
     UserService userService;
+    @Autowired
+    HttpSession session;
 
     @PostMapping("/editEmail")
-    public String postEditEmail(@ModelAttribute @Valid UserEmailEditDto userEmailEditDto, BindingResult result, HttpServletRequest request)
-    {
-        HttpSession session = request.getSession();
-        if(session.getAttribute("user") == null){
+    public String postEditEmail(@ModelAttribute @Valid UserEmailEditDto userEmailEditDto, BindingResult result, Model model) {
+        if(session.getAttribute("user") == null) {
             return "redirect:/main";
         }
 
-        if(result.hasErrors()){
+        if(result.hasErrors()) {
             return "editEmail";
         }
 
@@ -40,7 +39,7 @@ public class EditEmailController {
         String confirmPassword = userEmailEditDto.getPassword();
 
         if(!BCrypt.checkpw(confirmPassword, password)){
-            request.setAttribute("password", true);
+            model.addAttribute("password", true);
             return "editEmail";
         }
 
@@ -48,8 +47,8 @@ public class EditEmailController {
         user.setEmail(newEmail);
         String effect = userService.saveToDb(user);
 
-        if(effect.equals("email")){
-            request.setAttribute("email", true);
+        if(effect.equals("email")) {
+            model.addAttribute("email", true);
             user.setEmail(oldEmail);
             return "editEmail";
         }
@@ -57,9 +56,8 @@ public class EditEmailController {
     }
 
     @GetMapping("/editEmail")
-    public String getEditEmail(HttpServletRequest request, Model model){
-        HttpSession session = request.getSession();
-        if(session.getAttribute("user") == null){
+    public String getEditEmail(Model model){
+        if(session.getAttribute("user") == null) {
             return "redirect:/main";
         }
         model.addAttribute("userEmailEditDto", new UserEmailEditDto());

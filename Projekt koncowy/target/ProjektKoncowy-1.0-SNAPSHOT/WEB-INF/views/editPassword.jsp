@@ -25,6 +25,7 @@
 
         <form:password path="oldPassword" placeholder="confirm with old password"/>
         <form:errors path="oldPassword" cssClass="error"/>
+        <c:if test="${wrongPassword}"><span class="error">Błędne hasło</span></c:if>
 
         <input type="submit" value="zmień hasło"/>
 

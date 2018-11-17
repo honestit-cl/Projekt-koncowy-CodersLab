@@ -17,10 +17,10 @@ public class UserEditPasswordDto {
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,20}$", message = "Hasło powinno zawierać 8-20 znaków małą literę, dużą literę i cyfrę")
     private String oldPassword;
 
+
     public String getNewPassword() {
         return newPassword;
     }
-
     public void setNewPassword(String newPassword) {
         this.newPassword = newPassword;
     }
@@ -28,7 +28,6 @@ public class UserEditPasswordDto {
     public String getConfirmNewPassword() {
         return confirmNewPassword;
     }
-
     public void setConfirmNewPassword(String confirmNewPassword) {
         this.confirmNewPassword = confirmNewPassword;
     }
@@ -36,7 +35,6 @@ public class UserEditPasswordDto {
     public String getOldPassword() {
         return oldPassword;
     }
-
     public void setOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
     }

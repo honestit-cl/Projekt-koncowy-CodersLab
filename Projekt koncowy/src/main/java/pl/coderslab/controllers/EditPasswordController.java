@@ -7,6 +7,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import pl.coderslab.beans.BCrypt;
 import pl.coderslab.dtos.UserEditPasswordDto;
 import pl.coderslab.entity.User;
 import pl.coderslab.services.UserService;
@@ -19,23 +20,33 @@ public class EditPasswordController {
 
     @Autowired
     UserService userService;
+    @Autowired
+    HttpSession session;
 
     @PostMapping("/editPassword")
-    public String postEditPassword(@ModelAttribute @Valid UserEditPasswordDto userEditPasswordDto,
-                                   BindingResult result, HttpSession session, Model model)
-    {
-        if(session.getAttribute("user") == null){
+    public String postEditPassword(@ModelAttribute @Valid UserEditPasswordDto userEditPasswordDto, BindingResult result, Model model) {
+        if(session.getAttribute("user") == null) {
             return "redirect:/main";
         }
-        if(result.hasErrors()){
+        if(result.hasErrors()) {
             return "editPassword";
         }
 
-        if(!userEditPasswordDto.getNewPassword().equals(userEditPasswordDto.getConfirmNewPassword())){
+        String newPassword = userEditPasswordDto.getNewPassword();
+        String confirmNewPassword = userEditPasswordDto.getConfirmNewPassword();
+        if(!newPassword.equals(confirmNewPassword)) {
             model.addAttribute("differentPassword", true);
             return "editPassword";
         }
+
         User user = (User) session.getAttribute("user");
+
+        String oldPassword = userEditPasswordDto.getOldPassword();
+        if(!BCrypt.checkpw(oldPassword, user.getPassword())){
+            model.addAttribute("wrongPassword", true);
+            return "editPassword";
+        }
+
         user.setPassword(userEditPasswordDto.getNewPassword());
         user.hashPassword();
         userService.saveToDb(user);
@@ -44,7 +55,7 @@ public class EditPasswordController {
     }
 
     @GetMapping("/editPassword")
-    public String getEditPassword(HttpSession session, Model model){
+    public String getEditPassword(Model model){
         if(session.getAttribute("user") == null){
             return "redirect:/main";
         }

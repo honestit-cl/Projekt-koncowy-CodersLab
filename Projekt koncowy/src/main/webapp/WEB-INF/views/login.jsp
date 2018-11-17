@@ -21,13 +21,14 @@
     %>
     <c:import url="header.jsp"/>
 
-    <form:form method="post" modelAttribute="user">
+    <form:form method="post" modelAttribute="userLoginDto">
         <form:input path="name" placeholder="name"/><br/>
         <form:password path="password" placeholder="password"/><br/>
 
         <input type="submit" value="Zaloguj się"/><br/>
-        <c:if test="${arguments}"><span class="error">Wszystkie pola wymagane</span><br/></c:if>
-        <c:if test="${error}"><span class="error">Niewłaściwa nazwa użytkownika lub hasło</span><br/></c:if>
+        <c:if test="${emptyField}"><span class="error">Wszystkie pola wymagane</span></c:if>
+        <c:if test="${wrongData}"><span class="error">Niewłąściwy login lub hasło</span></c:if>
+
         <c:if test="${success}"><span class="success">Witam ${user.name}</span><br/></c:if>
     </form:form>
 

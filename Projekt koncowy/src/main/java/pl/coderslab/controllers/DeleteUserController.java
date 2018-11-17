@@ -20,9 +20,11 @@ public class DeleteUserController {
 
     @Autowired
     UserService userService;
+    @Autowired
+    HttpSession session;
 
     @PostMapping("/deleteUser")
-    public String postDeleteUser(@ModelAttribute @Valid UserDeleteDto userDeleteDto, BindingResult result, HttpSession session, Model model){
+    public String postDeleteUser(@ModelAttribute @Valid UserDeleteDto userDeleteDto, BindingResult result, Model model) {
         if(session.getAttribute("user") == null){
             return "redirect:/main";
         }
@@ -33,7 +35,7 @@ public class DeleteUserController {
 
         User user = (User)session.getAttribute("user");
 
-        if(!BCrypt.checkpw(userDeleteDto.getPassword(), user.getPassword())){
+        if(!BCrypt.checkpw(userDeleteDto.getPassword(), user.getPassword())) {
             model.addAttribute("password", true);
             return "deleteUser";
         }
@@ -44,8 +46,8 @@ public class DeleteUserController {
     }
 
     @GetMapping("/deleteUser")
-    public String getDeleteUser(HttpSession session, Model model){
-        if(session.getAttribute("user") == null){
+    public String getDeleteUser(Model model){
+        if(session.getAttribute("user") == null) {
             return "redirect:/main";
         }
         model.addAttribute("userDeleteDto", new UserDeleteDto());
