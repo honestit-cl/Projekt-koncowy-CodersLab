@@ -7,13 +7,11 @@
     <script src="../../js/jQuery3.3.1.js"></script>
     <script src="../../js/app.js"></script>
     <style>
-        #game, #enemyGame, ul, h2, body{
-            text-align: center;
-        }
         #game, #enemyGame{
+            width: 200px;
             display: inline-block;
         }
-        button, .pseudoButton{
+        .buttonInGame{
             width: 50px;
             height: 50px;
             display: inline-block;
@@ -36,6 +34,8 @@
         <div id="timer">Czas gry: 00:00</div>
     </ul>
 
+    <br/>
+
     <div id="game">
         Twoja gra:
         <div class="gameField">
@@ -53,7 +53,7 @@
         <div class="gameField">
             <c:forEach begin="1" var="i" end="${length}">
                 <c:forEach begin="1" var="j" end="${length}">
-                    <div class="buttonInGame pseudoButton">${((i - 1) * length) + j}</div>
+                    <button class="buttonInGame pseudoButton">${((i - 1) * length) + j}</button>
                 </c:forEach>
                 <br/>
             </c:forEach>

@@ -4,18 +4,7 @@
 <html>
 <head>
     <title>${user.name}</title>
-
-    <style>
-        .tabDiv{
-            display: inline-block;
-        }
-        table{
-            border-collapse: collapse;
-        }
-        table, td, tr{
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/userTabs.css"/>
 </head>
 <body>
     <c:import url="header.jsp"/>

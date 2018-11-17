@@ -32,7 +32,6 @@
         <c:if test="${!logged}">
             <c:if test="${inRegister}"><a id="loginLink" href="/login">Zaloguj się!</a></c:if>
             <c:if test="${inLogin}"><a id="registerLink" href="/register">Zarejestruj się!</a></c:if>
-            <div style="clear: both;"></div>
         </c:if>
     </header>
 </body>
