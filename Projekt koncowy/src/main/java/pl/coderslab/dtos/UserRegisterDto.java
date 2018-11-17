@@ -1,9 +1,7 @@
 package pl.coderslab.dtos;
 
-import org.hibernate.validator.constraints.NotBlank;
 import pl.coderslab.entity.User;
 
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 public class UserRegisterDto {
