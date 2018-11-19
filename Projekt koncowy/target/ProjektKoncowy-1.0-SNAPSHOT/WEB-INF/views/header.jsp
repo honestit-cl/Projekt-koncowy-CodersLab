@@ -21,7 +21,7 @@
             </c:forEach>
 
             <a id="logoutLink" href="/logout">Wyloguj się</a>
-            <a id="user" href="/user"><i class="icon-user-5"></i></a>
+            <a id="userLink" href="/user"><i class="icon-user-5"></i></a>
         </c:if>
         <c:if test="${!logged}">
             <c:if test="${inRegister}"><a id="loginLink" href="/login">Zaloguj się!</a></c:if>

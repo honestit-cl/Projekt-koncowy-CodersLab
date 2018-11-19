@@ -25,11 +25,23 @@ a{
     width: 48px;
     background-color: gray;
 }
-#registerLink{
+#userLink{
+    background-color: #cccccc;
+    width: 30px;
+    height: 30px;
 }
-#loginLink{
-
+#userLink i{
+    padding-top: 4px;
 }
 #logoutLink{
-
+    padding: 0 3px;
+    background-color: indianred;
+}
+#registerLink{
+    padding: 0 3px;
+    background-color: gray;
+}
+#loginLink{
+    padding: 0 3px;
+    background-color: gray;
 }
