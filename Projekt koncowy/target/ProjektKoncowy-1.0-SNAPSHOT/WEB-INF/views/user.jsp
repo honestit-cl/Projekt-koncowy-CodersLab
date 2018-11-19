@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>${user.name}</title>
-    <link rel="stylesheet" type="text/css" href="../../css/userTabs.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/user.css"/>
 </head>
 <body>
     <c:import url="header.jsp"/>
@@ -21,7 +21,7 @@
         <a href="/editEmail">Edytuj email</a><br/>
         <a href="/editPassword">Edytuj hasło</a><br/>
         <a href="/deleteUser">Usuń konto</a><br/>
-    </div>
+    </div><br/>
 
 
 

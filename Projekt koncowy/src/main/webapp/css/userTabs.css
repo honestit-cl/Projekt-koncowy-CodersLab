@@ -1,9 +1,0 @@
-.tabDiv{
-    display: inline-block;
-}
-table{
-    border-collapse: collapse;
-}
-table, td, tr{
-    border: 1px solid black;
-}
