@@ -3,37 +3,27 @@ package pl.coderslab.beans;
 import java.util.Arrays;
 
 public class RandomMachine {
-    private int length;
-    private int[][] tab;//W grze tablica zewnętrzna reprezentuje indeksy przycisków a wewnętrzna losowe, inne indeksy
-
-    public RandomMachine(int length){
-        this.length = length;
-        setTab();
-    }
-
     public static void main(String[] args) {
-        int [][] tab = new RandomMachine(4).getTab();
+        int [][] tab = RandomMachine.getTab(9);
         for(int [] i : tab){
             System.out.println(Arrays.toString(i));
         }
     }
 
-    public int[][] getTab() {
-        return tab;
-    }
-
-    private void setTab(){
-        this.tab = new int [length][];
+    public static int[][] getTab(int length){
+        int [][] tab = new int [length][];
         for(int i = 0; i < tab.length; i++){
             tab[i] = new int [(int)(Math.random() * 3) + 1];//{1, 2, 3}
-            int [] helpTab = randomIndexes(i);
+            int [] helpTab = randomIndexes(length, i);
             for(int j = 0; j < tab[i].length; j++){
                 tab[i][j] = helpTab[j];
             }
         }
+
+        return tab;
     }
 
-    private int[] randomIndexes(int otherThanThis){
+    private static int[] randomIndexes(int length, int otherThanThis){
         int [] tab = new int [length];
         for(int i = 0; i < tab.length; i++){//Wypełniamy tablicę tab indeksami
             tab[i] = i;

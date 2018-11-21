@@ -74,7 +74,7 @@ public class GameController {
 
         session.setAttribute("level", levelInt);
 
-        int [][] tab = new RandomMachine(3 * 3).getTab();
+        int [][] tab = RandomMachine.getTab(3 * 3);
         model.addAttribute("tab", tab);
         return "game";
     }

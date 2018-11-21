@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8928d892-21df-4049-ac4f-73d715003e6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/hardEnemy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/mediumEnemy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/game.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/game.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/easyEnemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/easyEnemy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektKoncowy-1.0-SNAPSHOT/WEB-INF/views/game.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektKoncowy-1.0-SNAPSHOT/WEB-INF/views/game.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/beans/RandomMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/beans/RandomMachine.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,7 +119,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="14" />
-          <entry key="java" value="39" />
+          <entry key="java" value="40" />
           <entry key="js" value="4" />
           <entry key="jsp" value="34" />
         </counts>
@@ -132,7 +127,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="14" />
-          <entry key="JAVA" value="39" />
+          <entry key="JAVA" value="40" />
           <entry key="JSP" value="34" />
           <entry key="JavaScript" value="4" />
         </counts>
@@ -140,7 +135,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1181" />
-          <entry key="java" value="2475" />
+          <entry key="java" value="2550" />
           <entry key="js" value="1016" />
           <entry key="jsp" value="1116" />
         </counts>
@@ -149,7 +144,7 @@
         <counts>
           <entry key="CSS" value="1181" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="2475" />
+          <entry key="JAVA" value="2550" />
           <entry key="JSP" value="1116" />
           <entry key="JavaScript" value="1015" />
         </counts>
@@ -158,62 +153,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/game.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/hardEnemy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="48" selection-start-line="46" selection-end-line="48" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/easyEnemy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mediumEnemy.js">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/beans/RandomMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -241,7 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/services/MailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/email/EmailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/email/GoogleMail.java" />
@@ -292,6 +235,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/game.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/hardEnemy.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/mediumEnemy.js" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/beans/RandomMachine.java" />
       </list>
     </option>
   </component>
@@ -479,7 +423,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542808280331" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542818093947" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -679,18 +623,18 @@
       <workItem from="1542181033387" duration="38078000" />
       <workItem from="1542288007535" duration="15698000" />
       <workItem from="1542485826233" duration="15083000" />
-      <workItem from="1542641419352" duration="7819000" />
+      <workItem from="1542641419352" duration="8678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114057000" />
+    <option name="totallyTimeSpent" value="114916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -700,7 +644,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28032786" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28032786" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -930,13 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/beans/RandomMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/form.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1012,6 +949,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mediumEnemy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/hardEnemy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="48" selection-start-line="46" selection-end-line="48" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/game.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1032,23 +989,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/hardEnemy.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/beans/RandomMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="48" selection-start-line="46" selection-end-line="48" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mediumEnemy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
