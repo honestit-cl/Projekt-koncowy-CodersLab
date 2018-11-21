@@ -30,14 +30,23 @@ $(function(){
         pseudoClick[index]();//klikanie każdego, inaczej kodowanie gry :)
     });
 
+    var randomCounter = 10;
+    var reverseTab = [0,1,2,3,4,5,6,7,8];
     setInterval(enemyClick, 1000);
 
     //Takie tam funkcje
 
     function enemyClick(){
-        var rand = parseInt(Math.random() * enemyButtons.length);
         incrementEnemyCounter();
-        pseudoClick[rand]();
+        if(randomCounter > 0){
+            var rand = parseInt(Math.random() * enemyButtons.length);
+            pseudoClick[rand]();
+            reverseTab.push(rand);
+            randomCounter--;
+        }else{
+            pseudoClick[reverseTab[0]]();
+            reverseTab.shift();
+        }
         if(checkEnemyWinCondition()){
             redirectMain();
         }
