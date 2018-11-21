@@ -12,6 +12,6 @@ Elementy:
 	liczaca ilosc ruchow i czas gry
 - strona uzytkownika
 	podsumowanie osiagniec
-	taclica prezentujaca 10 najlopszych rozgruwek
+	tablica prezentujaca 10 najlepszych rozgrywek
 	
 
