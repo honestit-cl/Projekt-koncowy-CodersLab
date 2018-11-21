@@ -59,9 +59,6 @@ $(function(){
 
     setInterval(function(){incrementGameTime();}, 1000);
 
-    $("table").remove();
-
-
 //Takie tam funkcje
 
     function monkeyClick(){

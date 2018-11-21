@@ -6,6 +6,11 @@
     <title>Game</title>
     <script src="../../js/jQuery3.3.1.js"></script>
     <script src="../../js/app.js"></script>
+    <%--<c:if test="${level == 1}"><script src="../../js/"></script></c:if>--%>
+    <%--<c:if test="${level == 2}"><script src="../../js/"></script></c:if>--%>
+    <%--<c:if test="${level == 3}"><script src="../../js/"></script></c:if>--%>
+
+    <script>$(function(){$("table").remove();})</script>
     <link rel="stylesheet" type="text/css" href="../../css/game.css"/>
 </head>
 <body>

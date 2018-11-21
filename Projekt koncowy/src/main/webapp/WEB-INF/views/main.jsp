@@ -9,7 +9,7 @@
     <c:import url="header.jsp"/>
 
     <h2>Link do uproszczonej wersji</h2>
-    <h1><a href="https://mighty-ravine-44060.herokuapp.com/game">https://mighty-ravine-44060.herokuapp.com/game</a></h1>
+    <h1><a href="https://mighty-ravine-44060.herokuapp.com/game" target="_blank">https://mighty-ravine-44060.herokuapp.com/game</a></h1>
 
 </body>
 </html>
