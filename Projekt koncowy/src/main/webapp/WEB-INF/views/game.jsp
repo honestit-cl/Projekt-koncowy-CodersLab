@@ -28,9 +28,9 @@
     <div id="game">
         Twoja gra:
         <div class="gameField">
-            <c:forEach begin="1" var="i" end="${length}">
-                <c:forEach begin="1" var="j" end="${length}">
-                    <button class="buttonInGame">${((i - 1) * length) + j}</button>
+            <c:forEach begin="1" var="i" end="3">
+                <c:forEach begin="1" var="j" end="3">
+                    <button class="buttonInGame">${((i - 1) * 3) + j}</button>
                 </c:forEach>
                 <br/>
             </c:forEach>
@@ -40,9 +40,9 @@
     <div id="enemyGame">
         Gra przeciwnika:
         <div class="gameField">
-            <c:forEach begin="1" var="i" end="${length}">
-                <c:forEach begin="1" var="j" end="${length}">
-                    <button class="buttonInGame pseudoButton">${((i - 1) * length) + j}</button>
+            <c:forEach begin="1" var="i" end="3">
+                <c:forEach begin="1" var="j" end="3">
+                    <button class="buttonInGame pseudoButton">${((i - 1) * 3) + j}</button>
                 </c:forEach>
                 <br/>
             </c:forEach>

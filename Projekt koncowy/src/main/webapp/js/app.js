@@ -7,7 +7,6 @@ $(function(){
     var enemyPushed = [];
 
     var trs = $("tr");
-    var giveUpButton = $("#giveUp");
 
     var clicks = 0;
     var gameTime = 0;
@@ -62,9 +61,6 @@ $(function(){
 
     $("table").remove();
 
-    giveUpButton.click(function(){
-        giveUp();
-    });
 
 //Takie tam funkcje
 
@@ -73,7 +69,7 @@ $(function(){
         console.log(rand);
         pseudoClick[rand]();
         if(checkMonkeyWinCondition()){
-            monkeyRedirect();
+            redirectMain();
         }
     }
 
@@ -149,9 +145,9 @@ $(function(){
         var toClick = $("#goToGame");
         toClick.click();
     }
-    function monkeyRedirect(){
+    function redirectMain(){
         var form = $(
-            "<form action='/main'>" +
+            "<form action='/main' style='display: none;'>" +
                 "<input type='submit' id='goToMain'/>" +
             "</form>"
         );
@@ -159,10 +155,6 @@ $(function(){
 
         var toClick = $("#goToMain");
         toClick.click();
-    }
-
-    function giveUp(){
-        monkeyRedirect();
     }
 });
 

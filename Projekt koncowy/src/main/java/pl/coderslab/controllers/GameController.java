@@ -65,17 +65,16 @@ public class GameController {
             return "redirect:/main";
         }
 
-        Pattern pattern = Pattern.compile("[2-5]");
+        Pattern pattern = Pattern.compile("[1-3]");
         Matcher matcher = pattern.matcher(level);
-        if(!matcher.matches()) {
+        if(!matcher.matches()){
             return "redirect:/main";
         }
         int levelInt = Integer.parseInt(level);
 
         session.setAttribute("level", levelInt);
 
-        int [][] tab = new RandomMachine(levelInt * levelInt).getTab();
-        model.addAttribute("length", levelInt);
+        int [][] tab = new RandomMachine(3 * 3).getTab();
         model.addAttribute("tab", tab);
         return "game";
     }

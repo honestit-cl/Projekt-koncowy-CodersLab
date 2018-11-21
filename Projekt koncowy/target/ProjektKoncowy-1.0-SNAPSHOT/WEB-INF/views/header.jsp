@@ -16,9 +16,10 @@
     %>
     <header>
         <c:if test="${logged}">
-            <c:forEach var="i" begin="2" end="5">
-                <a class="levelLink" href="/game?level=${i}">${i}x${i}</a>
-            </c:forEach>
+            <span style="padding-right: 5px;">Wybierz poziom:</span>
+            <a class="levelLink" href="/game?level=1">Łatwy</a>
+            <a class="levelLink" href="/game?level=2">Sredni</a>
+            <a class="levelLink" href="/game?level=3">Trudny</a>
 
             <a id="logoutLink" href="/logout">Wyloguj się</a>
             <a id="userLink" href="/user"><i class="icon-user-5"></i></a>
