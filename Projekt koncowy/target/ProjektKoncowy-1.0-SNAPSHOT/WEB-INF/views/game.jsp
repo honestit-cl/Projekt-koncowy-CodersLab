@@ -6,7 +6,7 @@
     <title>Game</title>
     <script src="../../js/jQuery3.3.1.js"></script>
     <script src="../../js/app.js"></script>
-    <%--<c:if test="${level == 1}"><script src="../../js/"></script></c:if>--%>
+    <c:if test="${level == 1}"><script src="../../js/easyEnemy.js"></script></c:if>
     <%--<c:if test="${level == 2}"><script src="../../js/"></script></c:if>--%>
     <%--<c:if test="${level == 3}"><script src="../../js/"></script></c:if>--%>
 
@@ -24,7 +24,6 @@
         <li>Po prawej masz małpę która sprubuje cię prześcignąć</li>
         <li>Powodzenia! :)</li>
 
-        <div id="counter">Kliknięcia: 0</div>
         <div id="timer">Czas gry: 00:00</div>
     </ul>
 
@@ -32,6 +31,7 @@
 
     <div id="game">
         Twoja gra:
+        <div id="counter">Kliknięcia: 0</div>
         <div class="gameField">
             <c:forEach begin="1" var="i" end="3">
                 <c:forEach begin="1" var="j" end="3">
@@ -44,6 +44,7 @@
 
     <div id="enemyGame">
         Gra przeciwnika:
+        <div id="enemyCounter">Kliknięcia: 0</div>
         <div class="gameField">
             <c:forEach begin="1" var="i" end="3">
                 <c:forEach begin="1" var="j" end="3">

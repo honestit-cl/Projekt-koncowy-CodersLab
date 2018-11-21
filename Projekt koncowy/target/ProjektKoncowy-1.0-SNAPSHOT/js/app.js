@@ -1,23 +1,16 @@
 $(function(){
 
     var buttons = $("#game .buttonInGame");
-    var enemyButtons = $("#enemyGame .buttonInGame");
-
     var pushed = [];
-    var enemyPushed = [];
 
     var trs = $("tr");
 
     var clicks = 0;
     var gameTime = 0;
 
-    var pseudoClick = [];
-
     buttons.each(function(index, element){
         pushed.push(true);
         $(element).css("background-color", "green");
-        enemyPushed.push(true);
-        enemyButtons.eq(index).css("background-color", "green");
     });
 
     buttons.each(function(index, element){
@@ -26,12 +19,6 @@ $(function(){
         var tds = tr.children();
         var len = tds.length;
 
-        pseudoClick.push(function(){
-            changeEnemyButton(index);
-            for(var i = 0; i < len; i++){
-                changeEnemyButton(parseInt(tds.eq(i).text()))
-            }
-        });
         $(element).on("click", function(){
             changeButton(index);
             for(var i = 0; i < len; i++){
@@ -40,20 +27,12 @@ $(function(){
         });
 
         $(element).click();//klikanie każdego, inaczej kodowanie gry :)
-        pseudoClick[index]();
-        //musi się wydażyć przed sprawdzaniem warunku wygranej
-
-        if(checkWinCondition()){
-            buttons.eq(0).click();
-            pseudoClick[0]();
-        }
 
         $(element).on("click", function(){
             incrementCounter();//zwiększenie licznika i wyświetlenie go na stronie
             if(checkWinCondition()){
                 redirectGame();//creating form and sending it by post to /game
             }
-            monkeyClick();
         });
     });
 
@@ -61,14 +40,6 @@ $(function(){
 
 //Takie tam funkcje
 
-    function monkeyClick(){
-        var rand = parseInt(Math.random() * enemyButtons.length);
-        console.log(rand);
-        pseudoClick[rand]();
-        if(checkMonkeyWinCondition()){
-            redirectMain();
-        }
-    }
 
     function changeButton(index){
         if(pushed[index] === true){
@@ -79,27 +50,10 @@ $(function(){
             pushed[index] = true;
         }
     }
-    function changeEnemyButton(index){
-        if(enemyPushed[index] === true){
-            enemyButtons.eq(index).css("background-color", "red");
-            enemyPushed[index] = false;
-        }else{
-            enemyButtons.eq(index).css("background-color", "green");
-            enemyPushed[index] = true;
-        }
-    }
 
     function checkWinCondition(){
         for(var i = 0; i < pushed.length; i++){
             if(pushed[i] === false){
-                return false;
-            }
-        }
-        return true;
-    }
-    function checkMonkeyWinCondition(){
-        for(var i = 0; i < enemyPushed.length; i++){
-            if(enemyPushed[i] === false){
                 return false;
             }
         }
@@ -140,17 +94,6 @@ $(function(){
         $("body").append(form);
 
         var toClick = $("#goToGame");
-        toClick.click();
-    }
-    function redirectMain(){
-        var form = $(
-            "<form action='/main' style='display: none;'>" +
-                "<input type='submit' id='goToMain'/>" +
-            "</form>"
-        );
-        $("body").append(form);
-
-        var toClick = $("#goToMain");
         toClick.click();
     }
 });
