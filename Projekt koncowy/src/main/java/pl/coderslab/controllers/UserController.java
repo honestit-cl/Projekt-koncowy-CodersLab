@@ -11,7 +11,6 @@ import pl.coderslab.services.GameService;
 import pl.coderslab.services.UserService;
 
 import javax.servlet.http.HttpSession;
-import java.util.regex.Pattern;
 
 @Controller
 public class UserController {
@@ -55,6 +54,8 @@ public class UserController {
         }else if(greenRed.equals("redTime")){
             model.addAttribute("redTime", true);
             model.addAttribute("top10", gameService.load10WorstTimeByUserIdOnLevel(userId, levelInt));
+        }else{
+            return "redirect:/user";
         }
 
         model.addAttribute("top10Level", top10Level);

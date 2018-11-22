@@ -52,14 +52,10 @@
         </table>
     </div>
 
-    <br/><br/><br/>
-    formularz developerski
 <form method="post">
-    <input type="text" name="top10Level" value="2"/>
-    <input type="text" name="greenRed" value="greenMoves"/>
-    <input type="submit"/>
+    <input type="submit" />
+    <input type="text" name="greenRed"/>
+    <input type="text" name="top10Level">
 </form>
-
-
 </body>
 </html>
