@@ -42,7 +42,7 @@ public class UserController {
         long userId = ((User)session.getAttribute("user")).getId();
         int levelInt = Integer.parseInt(top10Level);
 
-        s   witch (greenRed) {
+        switch (greenRed) {
             case "greenMoves":
                 model.addAttribute("greenMoves", true);
                 model.addAttribute("top10", gameService.load10BestMovesByUserIdOnLevel(userId, levelInt));

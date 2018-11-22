@@ -4,7 +4,7 @@ $(function(){
     var movesElement = $("#top10Moves");
     var timeElement = $("#top10Time");
 
-
+    
 
     function postForm(level, greenRed){
         var form = $(
