@@ -28,7 +28,7 @@
     <div class="tabDiv">
         <table>
             <tr>
-                <td id="top10Level">
+                <td id="top10Level" data-level="${top10Level}">
                     <c:if test="${top10Level == 1}">Latwy</c:if>
                     <c:if test="${top10Level == 2}">Sredni</c:if>
                     <c:if test="${top10Level == 3}">Trudny</c:if>

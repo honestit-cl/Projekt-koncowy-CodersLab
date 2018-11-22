@@ -23,19 +23,20 @@ table{
 table, td, tr{
     border: 1px solid black;
 }
+table td{
+    text-align: right;
+}
 #top10Level{
-    width: 60px;
     background-color: dodgerblue;
-}
-#top10Moves{
-
-}
-#top10Time{
-
 }
 .green{
     color: green;
 }
 .red{
     color: red;
+}
+.tabDiv tr:first-child td{
+    width: 65px;
+    cursor: pointer;
+    text-align: left;
 }
