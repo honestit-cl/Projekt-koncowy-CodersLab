@@ -1,13 +1,4 @@
-.tabDiv{
-    display: inline-block;
-}
-table{
-    border-collapse: collapse;
-}
-table, td, tr{
-    border: 1px solid black;
-}
-
+/*pola edycji*/
 #redZone{
     display: inline-block;
     border: 2px solid red;
@@ -18,7 +9,27 @@ table, td, tr{
     padding-bottom: 9px;
     margin-bottom: 10px;
 }
-
 #redZone a{
     background-color: red;
+}
+
+/*tabela*/
+.tabDiv{
+    display: inline-block;
+}
+table{
+    border-collapse: collapse;
+}
+table, td, tr{
+    border: 1px solid black;
+}
+#top10Level{
+    width: 60px;
+    background-color: dodgerblue;
+}
+#top10Moves{
+
+}
+#top10Time{
+
 }

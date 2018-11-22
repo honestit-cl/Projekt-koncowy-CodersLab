@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import pl.coderslab.entity.User;
 import pl.coderslab.services.GameService;
 import pl.coderslab.services.UserService;
 
 import javax.servlet.http.HttpSession;
+import java.util.regex.Pattern;
 
 @Controller
 public class UserController {
@@ -19,6 +22,22 @@ public class UserController {
     UserService userService;
     @Autowired
     GameService gameService;
+
+    @PostMapping("/user")
+    public String postUser(Model model,@RequestParam(required = false) String top10Level,
+    @RequestParam(required = false) String top10Green, @RequestParam(required = false) String top10Red){
+        if(session.getAttribute("user") == null){
+            return "redirect:/main";
+        }
+        long userId = ((User)session.getAttribute("user")).getId();
+
+        if(top10Level == null || top10Level.isEmpty()){
+            return "redirect:/user";
+        }
+        Pattern pattern = Pattern.compile("[1-3]");
+
+        return null;
+    }
 
     @GetMapping("/user")
     public String getUser(Model model){
@@ -38,14 +57,10 @@ public class UserController {
         model.addAttribute("movesCount", movesCount);
         model.addAttribute("timeCount", timeCount);
 
-        model.addAttribute("gamesByMoves2", gameService.load10BestMovesByUserIdOnLevel(userId, 2));
-        model.addAttribute("gamesByTime2", gameService.load10BestTimeByUserIdOnLevel(userId, 2));
-        model.addAttribute("gamesByMoves3", gameService.load10BestMovesByUserIdOnLevel(userId, 3));
-        model.addAttribute("gamesByTime3", gameService.load10BestTimeByUserIdOnLevel(userId, 3));
-        model.addAttribute("gamesByMoves4", gameService.load10BestMovesByUserIdOnLevel(userId, 4));
-        model.addAttribute("gamesByTime4", gameService.load10BestTimeByUserIdOnLevel(userId, 4));
-        model.addAttribute("gamesByMoves5", gameService.load10BestMovesByUserIdOnLevel(userId, 5));
-        model.addAttribute("gamesByTime5", gameService.load10BestTimeByUserIdOnLevel(userId, 5));
+        model.addAttribute("top10", gameService.load10BestMovesByUserIdOnLevel(userId, 1));
+        model.addAttribute("top10Level", 1);
+        model.addAttribute("greenMoves", 1);
+
         return "user";
     }
 }
