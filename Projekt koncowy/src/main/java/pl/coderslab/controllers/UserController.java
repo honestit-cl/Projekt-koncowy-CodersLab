@@ -40,13 +40,22 @@ public class UserController {
             return "redirect:/user";
         }
 
+        long userId = ((User)session.getAttribute("user")).getId();
+        int levelInt = Integer.parseInt(top10Level);
+
         if(greenRed.equals("greenMoves")){
             model.addAttribute("greenMoves", true);
-            model.addAttribute("top10", )
+            model.addAttribute("top10", gameService.load10BestMovesByUserIdOnLevel(userId, levelInt));
+        }else if(greenRed.equals("redMoves")){
+            model.addAttribute("redMoves", true);
+            model.addAttribute("top10", gameService.load10WorstMovesByUserIdOnLevel(userId, levelInt));
+        }else if(greenRed.equals("greenTime")){
+            model.addAttribute("greenTime", true);
+            model.addAttribute("top10", gameService.load10BestTimeByUserIdOnLevel(userId, levelInt));
+        }else if(greenRed.equals("redTime")){
+            model.addAttribute("redTime", true);
+            model.addAttribute("top10", gameService.load10WorstTimeByUserIdOnLevel(userId, levelInt));
         }
-
-        long userId = ((User)session.getAttribute("user")).getId();
-
 
         model.addAttribute("top10Level", top10Level);
         return null;
@@ -72,7 +81,7 @@ public class UserController {
 
         model.addAttribute("top10", gameService.load10BestMovesByUserIdOnLevel(userId, 1));
         model.addAttribute("top10Level", 1);
-        model.addAttribute("greenMoves", 1);
+        model.addAttribute("greenMoves", true);
 
         return "user";
     }

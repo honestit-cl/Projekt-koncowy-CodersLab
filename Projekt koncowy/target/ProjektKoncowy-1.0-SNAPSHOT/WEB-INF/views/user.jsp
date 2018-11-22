@@ -34,12 +34,12 @@
                     <c:if test="${top10Level == 3}">Trudny</c:if>
                 </td>
                 <td id="top10Moves">ruchy
-                    <c:if test="${greenMoves == 1}"><i class="green icon-up-big"></i></c:if>
-                    <c:if test="${redMoves == 1}"><i class="red icon-down-big"></i></c:if>
+                    <c:if test="${greenMoves}"><i class="green icon-up-big"></i></c:if>
+                    <c:if test="${redMoves}"><i class="red icon-down-big"></i></c:if>
                 </td>
                 <td id="top10Time">czas
-                    <c:if test="${greenTime == 1}"><i class="green icon-up-big"></i></c:if>
-                    <c:if test="${redTime == 1}"><i class="red icon-down-big"></i></c:if>
+                    <c:if test="${greenTime}"><i class="green icon-up-big"></i></c:if>
+                    <c:if test="${redTime}"><i class="red icon-down-big"></i></c:if>
                 </td>
             </tr>
             <c:forEach items="${top10}" var="game" varStatus="i">
@@ -52,9 +52,11 @@
         </table>
     </div>
 
+    <br/><br/><br/>
     formularz developerski
 <form method="post">
     <input type="text" name="top10Level" value="2"/>
+    <input type="text" name="greenRed" value="greenMoves"/>
     <input type="submit"/>
 </form>
 
