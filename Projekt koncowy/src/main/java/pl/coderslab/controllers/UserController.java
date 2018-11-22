@@ -24,11 +24,11 @@ public class UserController {
     GameService gameService;
 
     @PostMapping("/user")
-    public String postUser(Model model,@RequestParam(required = false) String top10Level){
+    public String postUser(Model model,@RequestParam(required = false) String top10Level,
+                           @RequestParam(required = false) String greenRed){
         if(session.getAttribute("user") == null){
             return "redirect:/main";
         }
-        long userId = ((User)session.getAttribute("user")).getId();
 
         if(top10Level == null || top10Level.isEmpty()){
             return "redirect:/user";
@@ -36,6 +36,16 @@ public class UserController {
         if(!top10Level.matches("[1-3]")){
             return "redirect:/user";
         }
+        if(greenRed == null || greenRed.isEmpty()){
+            return "redirect:/user";
+        }
+
+        if(greenRed.equals("greenMoves")){
+            model.addAttribute("greenMoves", true);
+            model.addAttribute("top10", )
+        }
+
+        long userId = ((User)session.getAttribute("user")).getId();
 
 
         model.addAttribute("top10Level", top10Level);

@@ -52,6 +52,7 @@
         </table>
     </div>
 
+    <br/><br/><br/>
     formularz developerski
 <form method="post">
     <input type="text" name="top10Level" value="2"/>

@@ -32,4 +32,12 @@ public class GameService {
     public List<Game> load10BestTimeByUserIdOnLevel(Long userId, Integer level){
         return gameRepository.load10BestTimeByUserIdOnLevel(userId, level);
     }
+
+    public List<Game> load10WorstMovesByUserIdOnLevel(Long userId, Integer level){
+        return gameRepository.load10WorstMovesByUserIdOnLevel(userId, level);
+    }
+
+    public List<Game> load10WorstTimeByUserIdOnLevel(Long userId, Integer level){
+        return gameRepository.load10WorstTimeByUserIdOnLevel(userId, level);
+    }
 }

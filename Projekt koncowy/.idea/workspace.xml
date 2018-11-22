@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8928d892-21df-4049-ac4f-73d715003e6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/GameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/GameRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/services/GameService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -122,7 +124,7 @@
         <counts>
           <entry key="css" value="17" />
           <entry key="html" value="1" />
-          <entry key="java" value="50" />
+          <entry key="java" value="52" />
           <entry key="js" value="4" />
           <entry key="jsp" value="35" />
         </counts>
@@ -131,7 +133,7 @@
         <counts>
           <entry key="CSS" value="17" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="50" />
+          <entry key="JAVA" value="52" />
           <entry key="JSP" value="35" />
           <entry key="JavaScript" value="4" />
         </counts>
@@ -139,17 +141,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1475" />
-          <entry key="java" value="3210" />
+          <entry key="java" value="3699" />
           <entry key="js" value="1016" />
-          <entry key="jsp" value="1473" />
+          <entry key="jsp" value="1531" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1475" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="3210" />
-          <entry key="JSP" value="1473" />
+          <entry key="JAVA" value="3699" />
+          <entry key="JSP" value="1531" />
           <entry key="JavaScript" value="1015" />
         </counts>
       </usages-collector>
@@ -160,8 +162,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="340">
+              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,11 +171,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/services/GameService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="41" selection-start-line="36" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/GameRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="31" column="70" lean-forward="true" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+            <state relative-caret-position="289">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
@@ -219,7 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/services/MailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/email/EmailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/email/GoogleMail.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/beans/EmailServiceImpl.java" />
@@ -232,7 +251,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/editPasswordController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/services/GameService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/ErrorController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/services/UserService.java" />
@@ -268,8 +286,10 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/user.css" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/services/GameService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/GameRepository.java" />
       </list>
     </option>
   </component>
@@ -424,15 +444,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="fontello-972fff05" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjektKoncowy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projekt koncowy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -466,7 +477,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542915823017" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542920485508" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -667,18 +678,18 @@
       <workItem from="1542288007535" duration="15698000" />
       <workItem from="1542485826233" duration="15083000" />
       <workItem from="1542641419352" duration="9653000" />
-      <workItem from="1542908024029" duration="3857000" />
+      <workItem from="1542908024029" duration="4918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119748000" />
+    <option name="totallyTimeSpent" value="120809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -688,7 +699,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28032786" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28032786" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -760,24 +771,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/ErrorController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/GameRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/services/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1036,20 +1033,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="340">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/services/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+        <state relative-caret-position="510">
+          <caret line="41" selection-start-line="36" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/GameRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="70" lean-forward="true" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
         </state>
       </provider>
     </entry>
