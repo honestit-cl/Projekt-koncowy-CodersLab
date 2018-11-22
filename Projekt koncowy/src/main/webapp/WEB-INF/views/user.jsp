@@ -5,6 +5,8 @@
 <head>
     <title>${user.name}</title>
     <link rel="stylesheet" type="text/css" href="../../css/user.css"/>
+    <script src="../../js/jQuery3.3.1.js"></script>
+    <script src="../../js/top10Table.js"></script>
 </head>
 <body>
     <c:import url="header.jsp"/>

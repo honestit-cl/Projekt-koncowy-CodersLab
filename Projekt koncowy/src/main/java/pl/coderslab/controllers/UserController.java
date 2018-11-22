@@ -42,20 +42,25 @@ public class UserController {
         long userId = ((User)session.getAttribute("user")).getId();
         int levelInt = Integer.parseInt(top10Level);
 
-        if(greenRed.equals("greenMoves")){
-            model.addAttribute("greenMoves", true);
-            model.addAttribute("top10", gameService.load10BestMovesByUserIdOnLevel(userId, levelInt));
-        }else if(greenRed.equals("redMoves")){
-            model.addAttribute("redMoves", true);
-            model.addAttribute("top10", gameService.load10WorstMovesByUserIdOnLevel(userId, levelInt));
-        }else if(greenRed.equals("greenTime")){
-            model.addAttribute("greenTime", true);
-            model.addAttribute("top10", gameService.load10BestTimeByUserIdOnLevel(userId, levelInt));
-        }else if(greenRed.equals("redTime")){
-            model.addAttribute("redTime", true);
-            model.addAttribute("top10", gameService.load10WorstTimeByUserIdOnLevel(userId, levelInt));
-        }else{
-            return "redirect:/user";
+        s   witch (greenRed) {
+            case "greenMoves":
+                model.addAttribute("greenMoves", true);
+                model.addAttribute("top10", gameService.load10BestMovesByUserIdOnLevel(userId, levelInt));
+                break;
+            case "redMoves":
+                model.addAttribute("redMoves", true);
+                model.addAttribute("top10", gameService.load10WorstMovesByUserIdOnLevel(userId, levelInt));
+                break;
+            case "greenTime":
+                model.addAttribute("greenTime", true);
+                model.addAttribute("top10", gameService.load10BestTimeByUserIdOnLevel(userId, levelInt));
+                break;
+            case "redTime":
+                model.addAttribute("redTime", true);
+                model.addAttribute("top10", gameService.load10WorstTimeByUserIdOnLevel(userId, levelInt));
+                break;
+            default:
+                return "redirect:/user";
         }
 
         model.addAttribute("top10Level", top10Level);
