@@ -4,7 +4,33 @@ $(function(){
     var movesElement = $("#top10Moves");
     var timeElement = $("#top10Time");
 
-    
+    var greenRedMoves = $("#top10Moves i");
+    var greenRedTime = $("#top10Time i");
+    var greenRed;
+
+    if(greenRedMoves.length === 1){
+        greenRed = "Moves";
+        if(greenRedMoves.hasClass("green")){
+            greenRed = "green" + greenRed;
+        }else{
+            greenRed = "red" + greenRed;
+        }
+    }else{
+        greenRed = "Time";
+        if(greenRedTime.hasClass("green")){
+            greenRed = "green" + greenRed;
+        }else{
+            greenRed = "red" + greenRed;
+        }
+    }
+
+    console.log(greenRed);
+
+
+    levelElement.on("click", function(){
+        var top10Level = $(this).data("level");
+    });
+
 
     function postForm(level, greenRed){
         var form = $(

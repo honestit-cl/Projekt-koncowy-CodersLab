@@ -5,6 +5,8 @@
 <head>
     <title>${user.name}</title>
     <link rel="stylesheet" type="text/css" href="../../css/user.css"/>
+    <script src="../../js/jQuery3.3.1.js"></script>
+    <script src="../../js/top10Table.js"></script>
 </head>
 <body>
     <c:import url="header.jsp"/>
@@ -54,8 +56,8 @@
 
 <form method="post">
     <input type="submit" />
-    <input type="text" name="greenRed"/>
-    <input type="text" name="top10Level">
+    <input type="text" name="greenRed" value="greenMoves"/>
+    <input type="text" name="top10Level" value="1"/>
 </form>
 </body>
 </html>

@@ -53,5 +53,11 @@
             </c:forEach>
         </table>
     </div>
+
+<form method="post">
+    <input type="submit" />
+    <input type="text" name="greenRed" value="greenMoves"/>
+    <input type="text" name="top10Level" value="1"/>
+</form>
 </body>
 </html>
