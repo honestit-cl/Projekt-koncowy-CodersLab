@@ -24,11 +24,18 @@ $(function(){
         }
     }
 
-    console.log(greenRed);
 
 
     levelElement.on("click", function(){
         var top10Level = $(this).data("level");
+
+        if(top10Level === 1 || top10Level === 2){
+            top10Level++;
+        }else{
+            top10Level = 1;
+        }
+
+        postForm(top10Level, greenRed);
     });
 
 
