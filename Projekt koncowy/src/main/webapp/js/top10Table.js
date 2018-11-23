@@ -6,7 +6,9 @@ $(function(){
 
     var greenRedMoves = $("#top10Moves i");
     var greenRedTime = $("#top10Time i");
+
     var greenRed;
+    var top10Level = levelElement.data("level");
 
     if(greenRedMoves.length === 1){
         greenRed = "Moves";
@@ -27,7 +29,6 @@ $(function(){
 
 
     levelElement.on("click", function(){
-        var top10Level = $(this).data("level");
 
         if(top10Level === 1 || top10Level === 2){
             top10Level++;
@@ -38,6 +39,22 @@ $(function(){
         postForm(top10Level, greenRed);
     });
 
+
+    movesElement.on("click", function(){
+        if(greenRed === "greenMoves"){
+            postForm(top10Level, "redMoves");
+        }else{
+            postForm(top10Level, "greenMoves");
+        }
+    });
+
+    timeElement.on("click", function(){
+        if(greenRed === "greenTime"){
+            postForm(top10Level, "redTime");
+        }else{
+            postForm(top10Level, "greenTime");
+        }
+    });
 
     function postForm(level, greenRed){
         var form = $(

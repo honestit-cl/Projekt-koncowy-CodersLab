@@ -139,7 +139,7 @@
         <counts>
           <entry key="css" value="1475" />
           <entry key="java" value="4007" />
-          <entry key="js" value="2245" />
+          <entry key="js" value="2542" />
           <entry key="jsp" value="1710" />
         </counts>
       </usages-collector>
@@ -149,7 +149,7 @@
           <entry key="HTML" value="5" />
           <entry key="JAVA" value="4007" />
           <entry key="JSP" value="1710" />
-          <entry key="JavaScript" value="2240" />
+          <entry key="JavaScript" value="2537" />
         </counts>
       </usages-collector>
     </session>
@@ -171,8 +171,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/top10Table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="323">
+              <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
               </folding>
@@ -450,7 +450,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542969819756" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542970130671" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -651,16 +651,15 @@
       <workItem from="1542288007535" duration="15698000" />
       <workItem from="1542485826233" duration="15083000" />
       <workItem from="1542641419352" duration="9653000" />
-      <workItem from="1542908024029" duration="8861000" />
+      <workItem from="1542908024029" duration="9137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124752000" />
+    <option name="totallyTimeSpent" value="125028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1041,8 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/top10Table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="323">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
           </folding>
