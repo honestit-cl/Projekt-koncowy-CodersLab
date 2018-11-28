@@ -15,7 +15,9 @@ components:
 	summary of achievements
 	, a table presenting the top 10 games
 
-
+Used technologies:
+- Spring
+- Hibernate
 Aplikacja jest gra w ktorej sie klika guziki
 
 Elementy:
