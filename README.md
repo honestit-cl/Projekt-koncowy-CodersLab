@@ -16,6 +16,10 @@ components:
 	, a table presenting the top 10 games
 
 Used technologies:
+- Java
+- HTML
+- CSS
+- JavaScript
 - Spring
 - Hibernate
 Aplikacja jest gra w ktorej sie klika guziki
@@ -34,5 +38,9 @@ Elementy:
 	, tabela przedstawiająca 10 najlepszych gier
 
 Wykożystane technologie:
+- Java
+- HTML
+- CSS
+- JavaScript
 - Spring
 - Hibernate
